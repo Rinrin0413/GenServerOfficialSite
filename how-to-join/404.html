@@ -2,14 +2,25 @@
 <!-- saved from url=(0014)about:internet -->
 <html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="GenServer Official Site">
+<meta property="og:title" content="GenServer - Minecraft マルチプレイ | GenServerの公式Webサイトです。当サーバーには、RPG「Twilight Star」などがあります。Webページで詳細を確認できます。">
+<meta property="og:url" content="https://gen3987.github.io/GenServer-Top/">
+<meta property="og:description" content="GenServerオフィシャルサイト">
+<meta property="og:image" content="https://cdn.discordapp.com/icons/630497383637057537/0ffabf96c71c9c9887c64cf1edad1556.webp?size=1024">
+
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no"> <link rel="shortcut icon" href="https://cdn.discordapp.com/attachments/696295387358822400/728532790005465088/2.png">
-<title>GenServer - サーバーへの接続方法 | GenServerの公式Webサイトです。当サーバーには、RPG「Twilight Star」などがあります。Webページで詳細を確認できます。</title>
+<title>GenServer - Minecraft マルチプレイ | GenServerの公式Webサイトです。当サーバーには、RPG「Twilight Star」などがあります。Webページで詳細を確認できます。</title>
 <!--<link href="https://fonts.googleapis.com/css?family=Roboto:300,900" rel="stylesheet">-->
 <link href="./css" rel="stylesheet" type="text/css">
+<link href="./css.css" rel="stylesheet" type="text/css">
 <link href="./perfect-scrollbar.min.css" rel="stylesheet" type="text/css">
 <link href="./style.css" rel="stylesheet" type="text/css">
 <style>
+
+
+
 * {
 	margin: 0;
 	padding: 0;
@@ -53,27 +64,6 @@ body {
 }
 
 /* main-visual */
-#main-visual {
-	background: #64CE80;
-	background: -webkit-linear-gradient(-45deg, #64CE80, #C68BC4);
-	background: -moz-linear-gradient(-45deg, #64CE80, #C68BC4);
-	background: -ms-linear-gradient(-45deg, #64CE80, #C68BC4);
-	background: -o-linear-gradient(-45deg, #64CE80, #C68BC4);
-	background: linear-gradient(-45deg, #64CE80, #C68BC4);
-
-
-	height: 400px;
-	display: flex;
-
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	-webkit-justify-content: center;
-	justify-content: center;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	-webkit-align-items: center;
-	align-items: center;
-}
 #main-visual h2 {
 	font-size: 21px;
 	color: #fff;
@@ -94,6 +84,7 @@ h3 {
 	position: fixed;
 	color: #142424;
 	width: 100%;
+        z-index: 100;
 	padding: 10px 30px;
 	background: #fff;
 	display: -webkit-flex;
@@ -323,14 +314,13 @@ h3 {
 	</div>
 </div>
 
-<aside id="sidebar" class="scroll ps ps--theme_default" data-ps-id="5e596c5f-5466-9f4b-ce13-d333405a2594">
+<aside id="sidebar" class="scroll ps ps--theme_default" data-ps-id="43205517-6fa7-a7e8-60d6-8e9f9da83930">
 	<nav id="global-nav">
 		<ul>
-			<!--タグはここから--><table border="0" cellspacing="0" cellpadding="0"><tr><td align="center"><img src="http://www.rays-counter.com/d465_f8_010/5f2a1e25d4760/" alt="アクセスカウンター" border="0"></a></td></tr><tr><td align="center"></td></tr></table><!--ここまで-->
-
+			<table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><img src="http://www.rays-counter.com/d465_f8_010/5f2a1e25d4760/" alt="アクセスカウンター" border="0"></td></tr><tr><td align="center"></td></tr></tbody></table>
 			<li><a href="https://gen3987.github.io/GenServer-Top/">トップ</a></li>
 			<li class="sub-menu">
-								<a href="#" class="sub-menu-head">初めての方へ</a>
+								<a href="https://gen3987.github.io/GenServer-Top/#" class="sub-menu-head">初めての方へ</a>
 				<ul class="sub-menu-nav">
 					<li><a href="https://gen3987.github.io/GenServer-tutorial/">チュートリアル</a></li>
 					<li><a href="https://gen3987.github.io/GenServer-how-to-join/">サーバーへの接続方法</a></li>
@@ -356,7 +346,7 @@ h3 {
 			<li class="sub-menu">
 				<a href="#" class="sub-menu-head">お問い合わせ</a>
 				<ul class="sub-menu-nav">
-					<li><a href="https://gen3987.github.io/GenServer-support/">サポートシステム(Q&A)</a></li>
+					<li><a href="https://gen3987.github.io/GenServer-support/">サポートシステム(Q&amp;A)</a></li>
 					<li><a href="https://gen3987.github.io/GenServer-contact/">サーバーへの問い合わせ</a></li>
 				</ul>
 			</li>
@@ -364,66 +354,26 @@ h3 {
 			<li><a href="https://gen3987.github.io/GenServer-privacy-policy/">プライバシーポリシー</a></li>
 		</ul>
 	</nav>
-<div class="ps__scrollbar-x-rail" style="left: 0px; bottom: 0px;"><div class="ps__scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__scrollbar-y-rail" style="top: 0px; right: 0px;"><div class="ps__scrollbar-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></aside>
+<div class="ps__scrollbar-x-rail" style="left: 0px; bottom: 0px;"><div class="ps__scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__scrollbar-y-rail" style="top: 0px; right: 0px;"><div class="ps__scrollbar-y" tabindex="0" style="top: 0px; height: 0px;"></div></div><div class="ps__scrollbar-x-rail" style="left: 0px; bottom: 0px;"><div class="ps__scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__scrollbar-y-rail" style="top: 0px; right: 0px;"><div class="ps__scrollbar-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></aside>
 
 
 <div id="container">
 	<header id="global-head">
 		<font size="5"><h1 id="brand-logo">GenServer</h1></font>
 	</header>
-
-	<main id="main">
-		<div id="main-visual">
-			<h1>サーバーへの接続方法</h1>
-		</div>
+	
+	<main id="main">		
 
 		<section class="inner">
+<div id="content">
 
-<div id="main" role="main" class="main_no_sections prk_normal_page" style="min-height: 769px;">
-<div class="prk_inner_block twelve columns centered"><div class="twelve columns sidebarized"><div class="prk_no_composer"><div class="wpb_content_element"><div class="samba_bquote_wrapper"><div class="prk_blockquote "><div class="in_quote"><img width="80%" src="https://cdn.discordapp.com/attachments/680585105818779681/713157764171563058/image0.png" class="attachment-large size-large wp-post-image" " sizes="(max-width: 1024px) 100vw, 1024px"></div></div></div></div><div id="samba-209" class="reg_wdt"><div class="prk_inner_block wpb_row vc_row-fluid   prk_section centered columns samba_align_left"><div class="row">
-<div class="vc_col-sm-12 wpb_column vc_column_container">
-<div class="wpb_wrapper">
-<div class="wpb_content_element"><div class="samba_bquote_wrapper"><div class="prk_blockquote "><div class="in_quote">
-<h2>必ず <a href="https://GenServer-rules-jpn">サーバーの決まり（ルール）</a>を読んだうえで参加するよう、お願いいたします。</h2>
-</div></div></div></div>
-</div>
-</div>
-</div><div class="clearfix"></div></div></div><div class="clearfix"></div><div id="samba-616" class="reg_wdt"><div class="prk_inner_block wpb_row vc_row-fluid   prk_section centered columns samba_align_left"><div class="row">
-<div class="vc_col-sm-12 wpb_column vc_column_container">
-<div class="wpb_wrapper">
-<div class="wpb_content_element"><div class="samba_bquote_wrapper"><div class="prk_blockquote "><div class="in_quote"><h3>１．マインクラフトがサーバーに接続できるバージョンであるか確認して下さい。</h3>
-<img src="https://cdn.discordapp.com/attachments/696295387358822400/736375095752130580/1.png" alt="step1" width="80%"></div></div></div></div><div class="wpb_content_element"><div class="samba_bquote_wrapper"><div class="prk_blockquote "><div class="in_quote">
-<h3>※設定できていなかった場合、更新してください。</h3>
-
-<h3>２．起動したらフレンドを開き、フレンドを追加を押します。</h3>
-<img src="https://cdn.discordapp.com/attachments/696295387358822400/736375095609524275/2.png" width="80%"></div></div></div></div><div class="wpb_content_element"><div class="samba_bquote_wrapper"><div class="prk_blockquote "><div class="in_quote">
-<h3>３．GEN3987と入力し、検索ボタンを押してフレンドを追加します。</h3>
-<img src="https://gen-server6.webnode.jp/_files/200000052-6c9ad6c9af/%E3%82%BF%E3%82%A4%E3%83%88%E3%83%AB%E3%81%AA%E3%81%97.png" width="80%"></div></div></div></div><div class="wpb_content_element"><div class="samba_bquote_wrapper"><div class="prk_blockquote "><div class="in_quote">
-<h3>４．サーバーが開いていたら、サーバーをクリックし、接続して下さい。</h3>
-<h3>※開いているか確認する場合は <a href="https://discord.gg/UdWztKv"  target="_blank" rel="noopener noreferrer">こちら</a></h3>
-<img src="https://media.discordapp.net/attachments/680585105818779681/712904116808056882/image0.png" width="80%"></div></div></div></div><div class="wpb_content_element"><div class="samba_bquote_wrapper"><div class="prk_blockquote "><div class="in_quote">
-<h3>５．接続したら、この場所に出ることを確認して下さい。</h3>
-<img src="https://cdn.discordapp.com/attachments/680585105818779681/736101490812518470/unknown.png" width="80%"></div></div></div></div><div class="wpb_content_element"><div class="samba_bquote_wrapper"><div class="prk_blockquote "><div class="in_quote">
-<h3>７．ゲームに参加できます。</h3>
-<img src="https://media.discordapp.net/attachments/680585105818779681/734204797921656852/unknown.png?width=1326&height=677" width="80%"></div></div></div></div>
-</div>
-</div>
-</div><div class="clearfix"></div></div></div><div class="clearfix"></div><div id="samba-83" class="reg_wdt"><div class="prk_inner_block wpb_row vc_row-fluid   prk_section centered columns samba_align_left"><div class="row">
-<div class="vc_col-sm-12 wpb_column vc_column_container">
-<div class="wpb_wrapper">
-<div class="wpb_text_column wpb_content_element ">
-<div class="wpb_wrapper">
-<h2>接続した後は？</h2>
-<h2>&nbsp;</h2>
-<p>接続してゲームに参加したときのレベルは、0です。<br>
-まずは、"RPG"の門に入って、チュートリアルを受けたりしましょう！<br>
-何かわからないことがあったら、管理者などに質問してみましょう！</p>
-<h2>&nbsp;</h2>
-<h2>生活を始めよう!</h2>
-</div>
-</div>
-</div>
-</div>
+<center>
+<font size="7"><h3>404</h3>
+<font color="#406466"><h2>PAGE NOT FOUND </h2></font></font>
+<p>指定されたページは見つかりませんでした。URLを確認してください。
+<br>左のメニューから、お好きなページに移動できます。<br>&nbsp;</p>
+<img src="https://cdn.discordapp.com/attachments/650926036745191425/744102187428479106/404.gif"　width="100%">
+</center>
 		</section>
 
 	</main>
@@ -461,6 +411,7 @@ h3 {
     });
 })(jQuery);
 </script>
+
 
 
 </body></html>
