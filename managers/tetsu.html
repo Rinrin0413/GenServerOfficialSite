@@ -1,10 +1,16 @@
-<!DOCTYPE html>
-<!-- saved from url=(0014)about:internet -->
+ <!DOCTYPE html>
 <html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="GenServer Official Site">
+<meta property="og:title" content="GenServer - Tetsu36o | GenServerの公式Webサイトです。当サーバーには、RPG「Twilight Star」などがあります。Webページで詳細を確認できます。">
+<meta property="og:url" content="https://gen3987.github.io/GenServer-Top/">
+<meta property="og:description" content="GenServerオフィシャルサイト">
+<meta property="og:image" content="https://cdn.discordapp.com/icons/630497383637057537/0ffabf96c71c9c9887c64cf1edad1556.webp?size=1024">
 
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no"> <link rel="shortcut icon" href="https://cdn.discordapp.com/attachments/696295387358822400/728532790005465088/2.png">
-<title>GenServer - 管理者一覧 | GenServerの公式Webサイトです。当サーバーには、RPG「Twilight Star」などがあります。Webページで詳細を確認できます。</title>
+<title>GenServer - Tetsu36o | GenServerの公式Webサイトです。当サーバーには、RPG「Twilight Star」などがあります。Webページで詳細を確認できます。</title>
 <!--<link href="https://fonts.googleapis.com/css?family=Roboto:300,900" rel="stylesheet">-->
 <link href="./css" rel="stylesheet" type="text/css">
 <link href="./css.css" rel="stylesheet" type="text/css">
@@ -12,9 +18,103 @@
 <link href="./style.css" rel="stylesheet" type="text/css">
 <style>
 
+.back {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+.back::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #333;
+  transform: scale(0, 1);
+  transform-origin: right top;
+  transition: transform .3s;
+}
+.back:hover::after {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+
+.head {
+    margin:  0;                 /* デフォルトCSS打ち消し */
+    border-bottom: solid 3px;   /* 線指定 */
+    padding-bottom:  5px;       /* 余白指定 */
+    margin-bottom: 15px;        /* 周りの余白指定 */
+    position:  relative;        /* 位置調整 */
+}
+
+.head:before {
+    content:  '';                   /* 空白の要素を作る */
+    width: 90px;                    /* 幅指定 */
+    height: 3px;                    /* 高さ指定 */
+    background-color: #6d82d1;      /* 背景色指定 */
+    display:  block;                /* ブロック要素にする */
+    position:  absolute;            /* 位置調整 */
+    left:  0;                       /* 位置調整 */
+    bottom: -3px;                   /* 位置調整 */
+}
+
+
+.btn-flat-simple-2 {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  color: white;
+  background: #6d82d1;
+  transition: .4s;
+}
+
+.btn-flat-simple-2:hover {
+  background: #6d82d1;
+  color: white;
+}
+
+.btn-flat-simple {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  color: white;
+  background: #406466;
+  transition: .4s;
+}
+
+.btn-flat-simple:hover {
+  background: #000000;
+  color: white;
+}
+
+.title2 {
+  padding: 1rem 2rem;
+  border-left: 5px solid #383838;
+  background: #289179;
+  width: 65%;
+}
+
+.title {
+    margin:  0;                 /* デフォルトCSS打ち消し */
+    font-size:  24px;           /* 文字サイズ指定 */
+    border-bottom: solid 3px;   /* 線指定 */
+    padding-bottom:  5px;       /* 余白指定 */
+    margin-bottom: 15px;        /* 周りの余白指定 */
+    position:  relative;        /* 位置調整 */
+    font-weight:  normal;       /* 文字の太さ調整 */
+}
+
+
+
+
 .imgWrap {
 	overflow: hidden;	/*拡大時にはみ出た部分を隠す*/
-	width: 180px;	/*画像の幅*/
+	width: 80%;	/*画像の幅*/
 }
 .imgWrap img {
 	display: block;
@@ -25,13 +125,22 @@
 	transition-duration: 0.3s;	/*変化に掛かる時間*/
 }
 
-div#parent{}
-div#parent div.child_flame{clear:both;}
-div#parent div.child{
-   float:left;
-   margin: 10px;
+
+.top-banner{
+	display: flex;
+	flex-wrap:wrap;
 }
-img {width:180px;}
+.top-banner li {
+	width: calc(100%/4);/*←画像を横に4つ並べる場合*/
+	padding:0 5px;/*←画像の左右に5pxの余白を入れる場合*/
+	box-sizing:border-box;
+}
+.top-banner li img {
+	max-width:100%; /*画像のはみだしを防ぐ*/
+	height: auto; /*画像の縦横比を維持 */
+	border:solid 1px #ccc; /*←画像を1pxのグレーの枠線で囲む指定の場合*/
+}
+
 
 * {
 	margin: 0;
@@ -72,31 +181,10 @@ body {
 	line-height: 1.9;
 }
 #main .inner {
-	padding: 60px;
+	padding: 0px;
 }
 
 /* main-visual */
-#main-visual {
-	background: #64CE80;
-	background: -webkit-linear-gradient(-45deg, #64CE80, #C68BC4);
-	background: -moz-linear-gradient(-45deg, #64CE80, #C68BC4);
-	background: -ms-linear-gradient(-45deg, #64CE80, #C68BC4);
-	background: -o-linear-gradient(-45deg, #64CE80, #C68BC4);
-	background: linear-gradient(-45deg, #64CE80, #C68BC4);
-
-
-	height: 400px;
-	display: flex;
-
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	-webkit-justify-content: center;
-	justify-content: center;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	-webkit-align-items: center;
-	align-items: center;
-}
 #main-visual h2 {
 	font-size: 21px;
 	color: #fff;
@@ -306,6 +394,31 @@ h3 {
 	background: #142424;
 }
 
+/* ▼ Rinrinが作成*/
+.name {
+    display: block;
+    padding: 20px;
+    margin-left: 10%;
+    top: 10px; 
+    width: 20%;
+    /*float: left;*/
+}
+
+.m {
+    display: block;
+    padding: 20px;
+    top: 80px; 
+    width: 35%;
+    float: right;
+    margin-right: 30%;
+}
+
+.img-image {
+	height: 50px;
+	width: 50px;
+}
+/* ▲ Rinrinが作成*/
+
 @media screen and (max-width: 900px) {
 	#container {
 		margin-left: 0;
@@ -347,11 +460,10 @@ h3 {
 	</div>
 </div>
 
-<aside id="sidebar" class="scroll ps ps--theme_default" data-ps-id="5e596c5f-5466-9f4b-ce13-d333405a2594">
+<aside id="sidebar" class="scroll ps ps--theme_default" data-ps-id="8e4391c7-617f-16f7-3ab0-e4a260397821">
 	<nav id="global-nav">
 		<ul>
 			<!--タグはここから--><table border="0" cellspacing="0" cellpadding="0"><tr><td align="center"><img src="http://www.rays-counter.com/d465_f8_010/5f2a1e25d4760/" alt="アクセスカウンター" border="0"></a></td></tr><tr><td align="center"></td></tr></table><!--ここまで-->
-
 			<li><a href="https://gen3987.github.io/GenServer-Top/">トップ</a></li>
 			<li class="sub-menu">
 								<a href="#" class="sub-menu-head">初めての方へ</a>
@@ -380,7 +492,7 @@ h3 {
 			<li class="sub-menu">
 				<a href="#" class="sub-menu-head">お問い合わせ</a>
 				<ul class="sub-menu-nav">
-					<li><a href="https://gen3987.github.io/GenServer-support/">サポートシステム(Q&A)</a></li>
+					<li><a href="https://gen3987.github.io/GenServer-support/">サポートシステム(Q&amp;A)</a></li>
 					<li><a href="https://gen3987.github.io/GenServer-contact/">サーバーへの問い合わせ</a></li>
 				</ul>
 			</li>
@@ -388,72 +500,45 @@ h3 {
 			<li><a href="https://gen3987.github.io/GenServer-privacy-policy/">プライバシーポリシー</a></li>
 		</ul>
 	</nav>
-<div class="ps__scrollbar-x-rail" style="left: 0px; bottom: 0px;"><div class="ps__scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__scrollbar-y-rail" style="top: 0px; right: 0px;"><div class="ps__scrollbar-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></aside>
+<div class="ps__scrollbar-x-rail" style="left: 0px; bottom: 0px;"><div class="ps__scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__scrollbar-y-rail" style="top: 0px; right: 0px;"><div class="ps__scrollbar-y" tabindex="0" style="top: 0px; height: 0px;"></div></div><div class="ps__scrollbar-x-rail" style="left: 0px; bottom: 0px;"><div class="ps__scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__scrollbar-y-rail" style="top: 0px; right: 0px;"><div class="ps__scrollbar-y" tabindex="0" style="top: 0px; height: 0px;"></div></div><div class="ps__scrollbar-x-rail" style="left: 0px; bottom: 0px;"><div class="ps__scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__scrollbar-y-rail" style="top: 0px; right: 0px;"><div class="ps__scrollbar-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></aside>
 
 
 <div id="container">
 	<header id="global-head">
-		<h1 id="brand-logo">GenServer</h1>
+		<font size="5"><h1 id="brand-logo">GenServer</h1></font>
 	</header>
 	
-	<main id="main">	
+
 
 <main id="main">
-		<div id="main-visual">
-			<h3>GenServer管理委員会 - 管理者一覧</h3>
-</div>		
+<section class="inner">
 
-		<section class="inner">
-<h3>現在稼働中の運営ユーザ</h3>
-<h4>&nbsp;<br>
-もし困ったことがありましたら、ログインしている運営までお声掛け下さい。<br>
-項目をクリックすると、各ユーザの紹介ページへ移動します。</h4>
-<center>
-<div id="parent">
-    <div class="child_flame">
-        <a href="./GEN3987.html"><div class="child"><div class="imgWrap">
-            <img src="GEN3987.png"><br>
-            <h1>GEN3987</h1>
-            <font color="#6e6e6e"><p>Network & Server Owner</p></font>
-        </div></div></a>
-        <a href="./rinrin.html"><div class="child"><div class="imgWrap">
-            <img src="rinrin.png"><br>
-            <h1>Rinrin</h1>
-            <font color="#6e6e6e"><p>Administrator & Builder</p></font>
-        </div></div></a>
-        <a href="./ruilu.html"><div class="child"><div class="imgWrap">
-            <img src="ruilu.png"><br>
-            <h1>RuiluLET</h1>
-            <font color="#6e6e6e"><p>Administrator & Builder</p></font>
-        </div></div></a>
-        <a href="./tetsu.html"><div class="child"><div class="imgWrap">
-            <img src="tetsu.png"><br>
-            <h1>Tetsu36o</h1>
-            <font color="#6e6e6e"><p>Administrator</p></font>
-        </div></div></a>
-    </div>
-    <div class="child_flame">
-        <a href="./tommyy.html"><div class="child"><div class="imgWrap">
-            <img src="tommyy.png"><br>
-            <h1>tommyy1002</h1>
-            <font color="#6e6e6e"><p>Administrator & Builder</p></font>
-        </div></div>
-	</a>
-        <a href="#"><div class="child">
-            <img src="～～～"><br>
-            <h1>GEN3987</h1>
-            <font color="#6e6e6e"><p></p></font>
-        </div>
-        <a href="#"><div class="child">
-            <img src="～～～"><br>
-            <h1>GEN3987</h1>
-            <font color="#6e6e6e"><p></p></font>
-        </div>
-    </div>
+<div class="name">
+    <font size="10px">
+        <h1>Tetsu36o</h1>
+    </font>
+    <br><br>
+<a class="btn-flat-simple-2">ADMINISTRATOR</a>
+<br>
+<br>
+<h1 class="head">お問い合わせ</h1>
+<a href="https://twitter.com/360tetsu360" target="_blank" data-color="#43b3e5"><img src="./icon/twitter_black.png" alt="Twitter_icon_black" class="img-image"></a>
 </div>
-</center>
-</section>
+<div class="m">
+<h1 class="tekitou">管理者</h1>
+<p>低浮上すぎてヤバイです</p>
+<br>
+<br>
+<h1 class="head">役職</h1>
+<br>
 
+<a class="btn-flat-simple"><i class="fa fa-caret-right"></i>ADMINISTRATOR(管理者)</a>     <a class="btn-flat-simple"><i class="fa fa-caret-right"></i>LOW LEVITATION(低浮上)</a>
+<br><br><br>
+
+<br>
+<div class="back"><a href="./"><font size="3">Back to List</font></a></div>
+
+</section>
 
 	</main>
 </div><!-- /#container -->
@@ -490,6 +575,7 @@ h3 {
     });
 })(jQuery);
 </script>
+
 
 
 </body></html>
