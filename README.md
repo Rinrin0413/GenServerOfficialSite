@@ -1,1 +1,1 @@
-# GenServer-how-to-join-jpn
+# GenServer-contact
