@@ -87,6 +87,6 @@ a {
   }
 }
 
-
+ul#slanting04 li{ width:150px; height:150px; margin:0 2%; display:inline-block; background:#FDAB75; transform:skewX(30deg);}ul#slanting04 li img{width:100%;}
 
 
