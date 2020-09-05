@@ -1,1 +1,486 @@
-test
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no"> <link rel="shortcut icon" href="https://cdn.discordapp.com/attachments/696295387358822400/728532790005465088/2.png">
+<title>GenServer - Minecraft マルチプレイ | GenServerの公式Webサイトです。当サーバーには、RPG「Twilight Star」などがあります。Webページで詳細を確認できます。</title>
+<!--<link href="https://fonts.googleapis.com/css?family=Roboto:300,900" rel="stylesheet">-->
+<link href="./index_files/css" rel="stylesheet" type="text/css">
+<link href="./index_files/perfect-scrollbar.min.css" rel="stylesheet" type="text/css">
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+*, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html,body {
+	height: 100%;
+}
+body {
+	font-size: 14px;
+	font-family: 'Lato','Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+	background: #eee;
+}
+
+
+#container {
+	background: #eee;
+	margin-left: 260px;
+	position: relative;
+	-moz-transition: margin-left .25s linear;
+	-webkit-transition: margin-left .25s linear;
+	transition: margin-left .25s linear;
+}
+#main {
+	background: #eee;
+	padding-top: 50px;
+	min-height: 1400px;
+}
+#main p {
+	margin-bottom: 1em;
+	line-height: 1.9;
+}
+#main .inner {
+	padding: 60px;
+}
+
+/* main-visual */
+#main-visual {
+	background: #64CE80;
+	background: -webkit-linear-gradient(-45deg, #64CE80, #C68BC4);
+	background: -moz-linear-gradient(-45deg, #64CE80, #C68BC4);
+	background: -ms-linear-gradient(-45deg, #64CE80, #C68BC4);
+	background: -o-linear-gradient(-45deg, #64CE80, #C68BC4);
+	background: linear-gradient(-45deg, #64CE80, #C68BC4);
+
+
+	height: 400px;
+	display: flex;
+
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+#main-visual h2 {
+	font-size: 21px;
+	color: #fff;
+}
+h3 {
+	font-size: 131%;
+	margin-bottom: .7em;
+}
+#copyright a {
+	color: #666;
+	text-decoration: none;
+}
+#copyright a:hover {
+	text-decoration: underline;
+}
+
+#global-head {
+	position: fixed;
+	color: #142424;
+	width: 100%;
+	padding: 10px 30px;
+	background: #fff;
+	display: -webkit-flex;
+	display: flex;
+}
+
+#sidebar {
+	padding-top: 60px;
+	width: 260px;
+	height: 100%;
+	position: fixed;
+	color: #afc3f2;
+	background: #142424;
+}
+
+#brand-logo {
+	-webkit-transition: .35s ease-in-out;
+	-moz-transition: .35s ease-in-out;
+	transition: .35s ease-in-out;
+}
+
+#global-nav ul {
+	list-style: none;
+	margin-left: 0;
+}
+#global-nav > ul > li {
+	position: relative;
+}
+
+#global-nav a {
+	color: #aeb4cb;
+	text-decoration: none;
+	display: block;
+	padding: 15px;
+	-moz-transition: color .3s linear;
+	-webkit-transition: color .3s linear;
+	transition: color .3s linear;
+}
+#global-nav .sub-menu.is-active > a,
+#global-nav a:hover {
+	color: #fff;
+	/*background: #fff;*/
+}
+
+
+/* sub-menu icon */
+#global-nav .sub-menu-head {
+	position: relative;
+}
+#global-nav .sub-menu-head:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 18px;
+	margin: auto;
+	vertical-align: middle;
+	width: 8px;
+	height: 8px;
+	border-top: 1px solid #aeb4cb;
+	border-right: 1px solid #aeb4cb;
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+
+	-webkit-transition: .25s ease-in-out;
+	-moz-transition: .25s ease-in-out;
+	transition: .25s ease-in-out;
+}
+#global-nav .sub-menu.is-active > a:after,
+#global-nav .sub-menu-head:hover:after {
+	border-color: #fff;
+}
+
+#global-nav .is-active .sub-menu-head:after {
+	-moz-transform: rotate(135deg);
+	-webkit-transform: rotate(135deg);
+	transform: rotate(135deg);
+}
+/* sub-menu */
+#global-nav .sub-menu-nav {
+	background: #142424;
+
+	display: none;
+	padding: 10px 0;
+
+	/*-moz-transition: all .4s ease;*/
+	/*-webkit-transition: all .4s ease;*/
+	/*transition: all .4s ease;*/
+}
+
+
+#global-nav .sub-menu-nav a {
+	color: #afc3f2;
+	padding: 8px 15px;
+}
+#global-nav .sub-menu-nav a:hover {
+	color: #fff;
+}
+
+
+/* nav-toggle */
+#nav-toggle {
+	position: fixed;
+	top: 15px;
+	left: 15px;
+	height: 32px;
+}
+#nav-toggle > div {
+	position: relative;
+	width: 32px;
+}
+#nav-toggle span {
+	width: 100%;
+	height: 2px;
+	left: 0;
+	display: block;
+	background: #fff;
+	position: absolute;
+	-webkit-transition: .35s ease-in-out;
+	-moz-transition: .35s ease-in-out;
+	transition: .35s ease-in-out;
+}
+
+/* #nav-toggle close */
+#nav-toggle span:nth-child(1) {
+	top: 0;
+	/*
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	transform: rotate(45deg);
+	*/
+}
+#nav-toggle span:nth-child(2) {
+	top: 11px;
+	/*
+	width: 0;
+	left: 50%;
+	*/
+}
+#nav-toggle span:nth-child(3) {
+	top: 22px;
+	/*
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	*/
+}
+
+/*
+.close #nav-toggle span:nth-child(1) {
+	top: 0;
+	-webkit-transform: rotate(0);
+	-moz-transform: rotate(0);
+	transform: rotate(0);
+}
+.close #nav-toggle span:nth-child(2) {
+	width: 100%;
+	left: 0;
+}
+.close #nav-toggle span:nth-child(3) {
+	top: 22px;
+	-webkit-transform: rotate(0);
+	-moz-transform: rotate(0);
+	transform: rotate(0);
+}
+*/
+
+
+/* z-index */
+#nav-toggle {
+	z-index: 1000;
+}
+#container {
+	z-index: 900;
+}
+
+/* close */
+.close #container {
+	margin-left: 0;
+}
+.close #brand-logo {
+	margin-left: 50px;
+}
+.close #nav-toggle span {
+	background: #142424;
+}
+
+@media screen and (max-width: 900px) {
+	#container {
+		margin-left: 0;
+	}
+	#brand-logo {
+		margin-left: 50px;
+	}
+	#nav-toggle span {
+		background: #142424;
+	}
+	.close #nav-toggle span {
+		background: #fff;
+	}
+
+	#sidebar {
+		left: -260px;
+		z-index: 910;
+		-webkit-transition: .35s ease-in-out;
+		-moz-transition: .35s ease-in-out;
+		transition: .35s ease-in-out;
+	}
+	.close #sidebar {
+		left: 0;
+	}
+}
+
+@media screen and (max-width: 400px) {
+
+}
+</style>
+</head>
+<body class="">
+
+<div id="nav-toggle">
+	<div>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+</div>
+
+<aside id="sidebar" class="scroll ps ps--theme_default" data-ps-id="5e596c5f-5466-9f4b-ce13-d333405a2594">
+	<nav id="global-nav">
+		<ul>
+			<!--タグはここから--><table border="0" cellspacing="0" cellpadding="0"><tr><td align="center"><img src="http://www.rays-counter.com/d465_f8_010/5f2a1e25d4760/" alt="アクセスカウンター" border="0"></a></td></tr><tr><td align="center"></td></tr></table><!--ここまで-->
+
+			<li><a href="https://gen3987.github.io/GenServer-Top/">トップ</a></li>
+			<li class="sub-menu">
+								<a href="#" class="sub-menu-head">初めての方へ</a>
+				<ul class="sub-menu-nav">
+					<li><a href="https://gen3987.github.io/GenServer-tutorial/">チュートリアル</a></li>
+					<li><a href="https://gen3987.github.io/GenServer-how-to-join/">サーバーへの接続方法</a></li>
+					<li><a href="https://gen3987.github.io/GenServer-rules/">サーバーの決まり(ルール)</a></li>
+					<li><a href="https://gen3987.github.io/GenServer-join-discord/">公式Discordグループについて</a></li>
+				</ul>
+			</li>
+			<li class="sub-menu">
+				<a href="#" class="sub-menu-head">ゲーム情報</a>
+				<ul class="sub-menu-nav">
+					<li><a href="https://gen3987.github.io/GenServer-managers/">GenServer管理委員会 - 管理者一覧</a></li>
+					<li><a href="https://gen3987.github.io/GenServer-punishments/">処罰データ</a></li>
+					<li><a href="https://gen3987.github.io/GenServer-news/">ニュース</a></li>
+				</ul>
+			</li>
+			<li class="sub-menu">
+				<a href="#" class="sub-menu-head">RPGエリア</a>
+				<ul class="sub-menu-nav">
+					<li><a href="https://gen3987.github.io/GenServer-tws-build/">建築スタッフ募集ページ</a></li>
+					<li><a href="https://gen3987.github.io/GenServer-tws-trailer/">予告編(動画)</a></li>
+				</ul>
+			</li>
+			<li class="sub-menu">
+				<a href="#" class="sub-menu-head">お問い合わせ</a>
+				<ul class="sub-menu-nav">
+					<li><a href="https://gen3987.github.io/GenServer-support/">サポートシステム(Q&A)</a></li>
+					<li><a href="https://gen3987.github.io/GenServer-contact/">サーバーへの問い合わせ</a></li>
+				</ul>
+			</li>
+			<li><a href="https://gen3987.github.io/GenServer-terms/">利用規約</a></li>
+			<li><a href="https://gen3987.github.io/GenServer-privacy-policy/">プライバシーポリシー</a></li>
+		</ul>
+	</nav>
+<div class="ps__scrollbar-x-rail" style="left: 0px; bottom: 0px;"><div class="ps__scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__scrollbar-y-rail" style="top: 0px; right: 0px;"><div class="ps__scrollbar-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></aside>
+
+
+<div id="container">
+	<header id="global-head">
+		<h1 id="brand-logo">GenServer</h1>
+	</header>
+
+	<main id="main">
+		<div id="main-visual">
+			<h1>GenServer・利用規約</h1>
+		</div>
+
+		<section class="inner">
+<h3>サーバー参加前に必ずご確認下さい。<br>接続すると規約に同意した事になります。<br>&nbsp;</h3>
+<h4>第１条（本規約）</h4>
+<p>ゲンサーバー、genserver、GenServer（以下「当サーバー」とします）は、当サーバーが提供する「マルチプレイサーバー」<br>
+（以下「本サービス」とします）について、本サービスを利用する接続者様（以下「会員」とします）が本サービスの機能を<br>
+利用するにあたり、以下の通り利用規約（以下「本規約」とします）を定めます。</p>
+<h4>第２条（本規約の変更）</h4>
+<p>当サーバーは、必要と判断した際に、会員の承諾なしに本規約の変更ができるものとします。<br>
+なお、この場合、本サービスの利用条件は変更後の本規約に基づくものとします。<br>
+本規約の変更は、オンラインまたは当サーバーが別途定める方法で随時会員に公表します。<br>
+変更後の本規約は、当サーバーが公表した時点から効力を生じるものとします。</p>
+<h4>第３条（損害賠償）</h4>
+<p>会員は、本サービスの利用により当サーバーまたは他者に対して損害を与えた場合、自己の責任と費用をもって損害を賠償するものとします。</p>
+<h4>第４条（著作権）</h4>
+<p>本サービスに掲載された情報、写真、その他の著作物は、当サーバーもしくは著作物の著作者または著作権者に帰属するものとします。<br>
+会員は、当サーバーの著作物について複製、転用、公衆送信、譲渡などの著作権、商標権などを侵害する行為を行ってはならないものとします。<br>
+また、Webサービス上を除き、当サーバー内に建築された造形物の所有権につきまして、管理者も行使できるものとします。<br>
+建築された造形物を使用するのは、以下の場合のみとします。<br>
+・造形物の撮影を行ない、非営利のプロモーションに使用する場合<br>
+・サーバー内イベント等、非営利の活動に使用する場合</p>
+<h4>第５条（禁止事項）</h4>
+<p>本サービスの利用にあたり、以下の各号のいずれかに該当する行為を禁止します。<br>
+会員の行為が以下の各号のいずれかに該当すると当サーバーが判断した場合には、事前に通知することなく、当該行為の全部または一部を停止させ、当該違反行為を排除するあらゆる措置を講じることができるものとします。</p>
+<p>他者への迷惑行為を防止する目的で作成されている「サーバールール」を違反する行為<br>
+当サーバーもしくは他者の著作権、商標権などの知的財産権を侵害する行為<br>
+他者の財産、プライバシーもしくは肖像権を侵害する行為<br>
+当サーバー、本サービスのコンテンツ提供者、その他第三者の名誉もしくは信用を毀損する行為<br>
+本サービスによりアクセス可能な当サーバーまたは他者の情報を改ざん、消去する行為<br>
+個人情報を、他の会員や第三者に漏洩する行為<br>
+他人になりすまして本サービスを利用する行為<br>
+政治活動、宗教活動、またはそれらにつながる行為あるいは公序良俗に反する行為<br>
+許可なく当サーバーの名称または明らかにその内容が含まれた名称を使用する行為<br>
+会員資格の第三者への利用許諾、貸与、譲渡、売買、その他担保に供する行為<br>
+本サービスの運営を妨害しようとする行為<br>
+本サービスの目的に反し、犯罪に結びつく行為<br>
+その他、理由の如何をとわず当サーバーが不適切と判断する行為</p>
+<h4>第６条（サービスの変更・終了）</h4>
+<p>当サーバーは、会員への事前の通知なく、本サービスの内容・名称の変更を行うことができるものとします。<br>
+但し、本サービスの終了（以下総称して「変更等」とします）する場合には、オンラインまたは当サーバーが別途定める方法で、事前に会員へ公表します。<br>
+なお、当サーバーは変更等によって会員または他者が被った損害について、この会員規約で特に定める場合を除き、一切の責任を負わないものとします。</p>
+<h4>第７条（サービス並びにコンテンツの中断または停止）</h4>
+<p>当サーバーは、以下のいずれかの事由が生じた場合には、会員に事前に通知することなく、一時的に本サービス並びにコンテンツ（以下総称して「本サービス等」とします）を中断または停止することがあります。</p>
+<p>なお当サーバーは、以下のいずれか、またはその他の事由により本サービス等の提供の遅延または中断、停止などが発生したとしても、会員または他者が被った損害について、この会員規約で特に定める場合を除き、一切の責任を負わないものとします。</p>
+<p>本サービス等用設備などの保守を定期的に、または緊急に行う場合<br>
+火災、停電、自然災害、紛争、暴動、労働争議などの不可抗力により本サービス等の提供ができなくなった場合<br>
+その他、運用上または技術上あるいは当サーバーの都合により、本サービス等の一時的な中断が必要と判断した場合</p>
+<h4>第８条（免責）</h4>
+<p>当サーバーは、本サービス等の利用に際して利用者に生じた不利益や損害などに対して、一切の責任を負わないものとします。<br>
+利用者が、本サービス等から得る情報などについての一切は、利用者の責任において判断するものとし、当サーバーは、いかなる保証も行なわないものとします。<br>
+利用者が使用する機器およびソフトウェアについて、当サーバーは、その動作保証は一切行なわないものとします。</p>
+<h4>第９条（会員資格の取消）</h4>
+<p>会員が次の各号のいずれかに該当する場合、当サーバーは、当該会員に事前に通知を行うことなく本サービスの使用を一時停止し、または退会処分とすることができるものとします。</p>
+<p>第５条各号の禁止事項のいずれかに該当し、またはその他本規約に違反することが判明した場合<br>
+当サーバー並びに本サービスの運営を妨害した場合<br>
+反社会的勢力であるか、もしくはそうした勢力と関係がある、もしくは過去に関係があった場合<br>
+法令違反、犯罪もしくは、それらのおそれのある行為をした場合、または刑事事件に関与している疑いがあり、本規約を継続することによって当サーバーの信用が害されるおそれがある場合<br>
+その他、当サーバーが会員として不適当と判断した場合</p>
+<h4>第10条（個人情報）</h4>
+<p>当サーバーは、会員の個人情報を別途オンライン上に掲示する「プライバシーポリシー」に基づき、適切に取り扱うものとします。</p>
+<h5>（利用規約の更新履歴）</h5>
+<p>・2020年8月11日：ページを公開しました。</p>
+</div>
+</div>
+</div>
+</div>
+</div></div></div></div>
+</div>
+</div>
+		</section>
+
+	</main>
+</div><!-- /#container -->
+
+
+
+
+<script src="./jquery.min.js"></script>
+<script src="./velocity.min.js"></script>
+<script src="./perfect-scrollbar.jquery.min.js"></script>
+<script type="text/javascript">
+(function($) {
+    $(function () {
+
+        // サイドサブメニューアコーディオン
+        $('.sub-menu-head').on('click', function(){
+            var $subNav = $(this).next('.sub-menu-nav');
+            if ($subNav.is(':visible')) {
+                $subNav.velocity('slideUp', {duration: 200});
+                $(this).parent('li').removeClass('is-active');
+            }
+            else {
+                $subNav.velocity('slideDown', {duration: 200});
+                $(this).parent('li').addClass('is-active');
+            }
+            return false;
+        });
+
+        $('#nav-toggle').on('click', function() {
+            $('body').toggleClass('close');
+        });
+
+        $('.scroll').perfectScrollbar();
+    });
+})(jQuery);
+</script>
+
+
+</body></html>
