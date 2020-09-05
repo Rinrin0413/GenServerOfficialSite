@@ -2,13 +2,25 @@
 <!-- saved from url=(0014)about:internet -->
 <html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="GenServer Official Site">
+<meta property="og:title" content="GenServer - Minecraft マルチプレイ | GenServerの公式Webサイトです。当サーバーには、RPG「Twilight Star」などがあります。Webページで詳細を確認できます。">
+<meta property="og:url" content="https://gen3987.github.io/GenServer-Top/">
+<meta property="og:description" content="GenServerオフィシャルサイト">
+<meta property="og:image" content="https://cdn.discordapp.com/icons/630497383637057537/0ffabf96c71c9c9887c64cf1edad1556.webp?size=1024">
+
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no"> <link rel="shortcut icon" href="https://cdn.discordapp.com/attachments/696295387358822400/728532790005465088/2.png">
 <title>GenServer - Minecraft マルチプレイ | GenServerの公式Webサイトです。当サーバーには、RPG「Twilight Star」などがあります。Webページで詳細を確認できます。</title>
 <!--<link href="https://fonts.googleapis.com/css?family=Roboto:300,900" rel="stylesheet">-->
-<link href="./index_files/css" rel="stylesheet" type="text/css">
-<link href="./index_files/perfect-scrollbar.min.css" rel="stylesheet" type="text/css">
+<link href="./css" rel="stylesheet" type="text/css">
+<link href="./css.css" rel="stylesheet" type="text/css">
+<link href="./perfect-scrollbar.min.css" rel="stylesheet" type="text/css">
+<link href="./style.css" rel="stylesheet" type="text/css">
 <style>
+
+
+
 * {
 	margin: 0;
 	padding: 0;
@@ -52,27 +64,6 @@ body {
 }
 
 /* main-visual */
-#main-visual {
-	background: #64CE80;
-	background: -webkit-linear-gradient(-45deg, #64CE80, #C68BC4);
-	background: -moz-linear-gradient(-45deg, #64CE80, #C68BC4);
-	background: -ms-linear-gradient(-45deg, #64CE80, #C68BC4);
-	background: -o-linear-gradient(-45deg, #64CE80, #C68BC4);
-	background: linear-gradient(-45deg, #64CE80, #C68BC4);
-
-
-	height: 400px;
-	display: flex;
-
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	-webkit-justify-content: center;
-	justify-content: center;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	-webkit-align-items: center;
-	align-items: center;
-}
 #main-visual h2 {
 	font-size: 21px;
 	color: #fff;
@@ -93,6 +84,7 @@ h3 {
 	position: fixed;
 	color: #142424;
 	width: 100%;
+        z-index: 100;
 	padding: 10px 30px;
 	background: #fff;
 	display: -webkit-flex;
@@ -322,14 +314,13 @@ h3 {
 	</div>
 </div>
 
-<aside id="sidebar" class="scroll ps ps--theme_default" data-ps-id="5e596c5f-5466-9f4b-ce13-d333405a2594">
+<aside id="sidebar" class="scroll ps ps--theme_default" data-ps-id="43205517-6fa7-a7e8-60d6-8e9f9da83930">
 	<nav id="global-nav">
 		<ul>
-			<!--タグはここから--><table border="0" cellspacing="0" cellpadding="0"><tr><td align="center"><img src="http://www.rays-counter.com/d465_f8_010/5f2a1e25d4760/" alt="アクセスカウンター" border="0"></a></td></tr><tr><td align="center"></td></tr></table><!--ここまで-->
-
+			<table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td align="center"><img src="http://www.rays-counter.com/d465_f8_010/5f2a1e25d4760/" alt="アクセスカウンター" border="0"></td></tr><tr><td align="center"></td></tr></tbody></table>
 			<li><a href="https://gen3987.github.io/GenServer-Top/">トップ</a></li>
 			<li class="sub-menu">
-								<a href="#" class="sub-menu-head">初めての方へ</a>
+								<a href="https://gen3987.github.io/GenServer-Top/#" class="sub-menu-head">初めての方へ</a>
 				<ul class="sub-menu-nav">
 					<li><a href="https://gen3987.github.io/GenServer-tutorial/">チュートリアル</a></li>
 					<li><a href="https://gen3987.github.io/GenServer-how-to-join/">サーバーへの接続方法</a></li>
@@ -355,7 +346,7 @@ h3 {
 			<li class="sub-menu">
 				<a href="#" class="sub-menu-head">お問い合わせ</a>
 				<ul class="sub-menu-nav">
-					<li><a href="https://gen3987.github.io/GenServer-support/">サポートシステム(Q&A)</a></li>
+					<li><a href="https://gen3987.github.io/GenServer-support/">サポートシステム(Q&amp;A)</a></li>
 					<li><a href="https://gen3987.github.io/GenServer-contact/">サーバーへの問い合わせ</a></li>
 				</ul>
 			</li>
@@ -363,32 +354,27 @@ h3 {
 			<li><a href="https://gen3987.github.io/GenServer-privacy-policy/">プライバシーポリシー</a></li>
 		</ul>
 	</nav>
-<div class="ps__scrollbar-x-rail" style="left: 0px; bottom: 0px;"><div class="ps__scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__scrollbar-y-rail" style="top: 0px; right: 0px;"><div class="ps__scrollbar-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></aside>
+<div class="ps__scrollbar-x-rail" style="left: 0px; bottom: 0px;"><div class="ps__scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__scrollbar-y-rail" style="top: 0px; right: 0px;"><div class="ps__scrollbar-y" tabindex="0" style="top: 0px; height: 0px;"></div></div><div class="ps__scrollbar-x-rail" style="left: 0px; bottom: 0px;"><div class="ps__scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__scrollbar-y-rail" style="top: 0px; right: 0px;"><div class="ps__scrollbar-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></aside>
 
 
 <div id="container">
 	<header id="global-head">
 		<font size="5"><h1 id="brand-logo">GenServer</h1></font>
 	</header>
-
-	<main id="main">
-		<div id="main-visual">
-			<h1>サーバーの決まり(ルール)</h1>
-		</div>
+	
+	<main id="main">		
 
 		<section class="inner">
-<h2>GenServerの独自のルールを紹介します。<br>ルールの確認は必須です。</h2>
-<h2>許可のない破壊行為の禁止</h2>		
-<p>他者の建築物を無許可で破壊、改造、侵入することを禁止します。</p>
-<h2>迷惑な（スパム）行為の禁止</h2>
-<p>他者が迷惑と感じるような建築、誹謗中傷や故意の攻撃などを禁止します。</p>
-<h2>窃盗行為の禁止</h2>
-<p>他者をだましたりバグを利用したりして、アイテムやポイントを不正に盗むことを禁止します。</p>
-<h2>特殊な事例</h2>
-<p>>序良俗に反するスキンやユーザ名の<br>使用禁止発見次第注意を行います。速やかに変更しない場合処罰の対象になります。<br><br>>Hackツール等の使用禁止<br>不正行為が可能なHackツール等の使用は処罰の対象となります。<br><br>>ゲーム内マネーを利息付きで貸す行為の禁止<br>ゲーム内マネーを貸し借りすることは可能ですが、金利を取って貸す行為はトラブル防止の観点から禁止しています。</p>
-<h3>これらを守ると約束できる方はゲームに参加できます。<h3>
-<font color="red"><p>ゲームへの参加で利用規約およびプライバシーポリシーに同意した事とします。</p></font>
-</section>
+<div id="content">
+
+<center>
+<font size="7"><h3>404</h3>
+<font color="#406466"><h2>PAGE NOT FOUND </h2></font></font>
+<p>指定されたページは見つかりませんでした。URLを確認してください。
+<br>左のメニューから、お好きなページに移動できます。<br>&nbsp;</p>
+<img src="https://cdn.discordapp.com/attachments/650926036745191425/744102187428479106/404.gif"　width="100%">
+</center>
+		</section>
 
 	</main>
 </div><!-- /#container -->
@@ -425,6 +411,7 @@ h3 {
     });
 })(jQuery);
 </script>
+
 
 
 </body></html>

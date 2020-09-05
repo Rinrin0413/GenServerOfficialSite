@@ -1,0 +1,1 @@
+# GenServer-rules-jpn
