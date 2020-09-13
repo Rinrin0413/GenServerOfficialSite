@@ -3078,6 +3078,28 @@ other
   color: white;
 }
 
+.c-badge-new {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 1.2rem;
+  background-color: black;
+  font-weight: bold;
+  letter-spacing: 0.48px;
+  color: white;
+  background-color: #dd69a2;
+}
+
+.c-badge-pickup {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 1.2rem;
+  background-color: black;
+  font-weight: bold;
+  letter-spacing: 0.48px;
+  color: white;
+  background-color: #4cc9a7;
+}
+
 .c-badge--new {
   background-color: #dd69a2;
 }
