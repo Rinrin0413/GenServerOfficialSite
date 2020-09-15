@@ -19,7 +19,7 @@ function countdownTimer(){
   insert += '<span class="h">' + addZeroDay(day) +':' + '</span>';
   insert += '<span class="h">' + addZero(hour) + ':'+'</span>';
   insert +=  '<span class="m">' + addZero(minutes) +':' + '</span>';
-  insert += '<span class="s">' + addZero(second)+ ':'+ '</span>';
+  insert += '<span class="s">' + addZero(second)+ ' '+ '</span>';
   document.getElementById('result').innerHTML = insert;
   setTimeout(countdownTimer,10);
   }
