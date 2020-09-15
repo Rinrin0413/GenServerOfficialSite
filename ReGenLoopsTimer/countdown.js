@@ -16,10 +16,10 @@ function countdownTimer(){
   period -= (minutes * (1000 * 60));
   var second = Math.floor(period / 1000);
   var insert = "";
-  insert += '<font size=7><h1><span class="h">' + addZeroDay(day) +':' + '</span></h1></font>';
-  insert += '<font size=7><h1><span class="h">' + addZero(hour) + ':'+'</span></h1></font>';
-  insert +=  '<font size=7><h1><span class="m">' + addZero(minutes) +':' + '</span></h1></font>';
-  insert += '<font size=7><h1><span class="s">' + addZero(second)+ ':'+ '</span></h1></font>';
+  insert += '<span class="h">' + addZeroDay(day) +':' + '</span>';
+  insert += '<span class="h">' + addZero(hour) + ':'+'</span>';
+  insert +=  '<span class="m">' + addZero(minutes) +':' + '</span>';
+  insert += '<span class="s">' + addZero(second)+ ':'+ '</span>';
 
   document.getElementById('result').innerHTML = insert;
   setTimeout(countdownTimer,10);
