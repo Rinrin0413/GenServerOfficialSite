@@ -19,6 +19,25 @@
 <link href="./style.css" rel="stylesheet" type="text/css">
 <style>
 
+
+.wrap {
+  width: 100%;
+  height: 500px;
+  border: 1px solid #333333;
+  position: relative;
+}
+.wrap .inner {
+  width: 50%;
+  height: 50%;
+  background: #86cb9e;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
 *,
 *:before,
 *:after {
@@ -429,8 +448,10 @@ h3 {
 <body class="">
 <center>
 <br><br><br>
-
-        <h1><font size=7><div id="result"></div></h1></font>
+<div class="wrap">
+  <div class="inner">
+        <h1><font size=7><div id="result"></div></h1></font></div>
+</div>
 
 </center>
 
