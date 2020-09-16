@@ -6,8 +6,7 @@ const btn = document.querySelector("#btn-play");   // <button>
 const bgm1 = new Howl({
     // 読み込む音声ファイル
     src: [
-      'op.ogg',
-      'op.mp3'  // Ogg非対応の場合にMP3を採用する
+      'test.mp3'
     ],
 
     // 設定 (以下はデフォルト値です)
