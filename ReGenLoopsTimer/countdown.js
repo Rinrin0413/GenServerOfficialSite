@@ -1,4 +1,4 @@
-var endDate = new Date('2020/09/16 21:00:00');
+var endDate = new Date('2020/09/30 23:59:59');
 var interval = 1000;
 
 
