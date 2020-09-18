@@ -815,13 +815,13 @@ text
   }
 }
 
-.c-discography {
+.c-information {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c-discography__header {
+.c-information__header {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 440px;
           flex: 0 0 440px;
@@ -829,60 +829,60 @@ text
 }
 
 @media only screen and (max-width: 1024px) {
-  .c-discography__header {
+  .c-information__header {
     margin-bottom: 45px;
   }
 }
 
 @media only screen and (max-width: 560px) {
-  .c-discography__header {
+  .c-information__header {
     margin-bottom: 50px;
   }
 }
 
-.c-discography__sticky.is-sticky {
+.c-information__sticky.is-sticky {
   position: fixed;
   width: 440px;
   padding-right: 30px;
 }
 
 @media only screen and (max-width: 1024px) {
-  .c-discography__sticky.is-sticky {
+  .c-information__sticky.is-sticky {
     position: relative;
     width: auto;
     padding-right: 0;
   }
 }
 
-.c-discography__sticky.is-stop {
+.c-information__sticky.is-stop {
   position: absolute;
   bottom: 0;
 }
 
 @media only screen and (max-width: 1024px) {
-  .c-discography__sticky.is-stop {
+  .c-information__sticky.is-stop {
     position: relative;
   }
 }
 
-.c-discography__sticky .c-btn5 {
+.c-information__sticky .c-btn5 {
   width: 320px;
   margin-bottom: 10px;
 }
 
 @media only screen and (max-width: 1024px) {
-  .c-discography__sticky .c-btn5 {
+  .c-information__sticky .c-btn5 {
     display: none;
   }
 }
 
 @media only screen and (max-width: 1024px) {
-  .c-discography__sticky .c-discography__share {
+  .c-information__sticky .c-information__share {
     display: none;
   }
 }
 
-.c-discography__type {
+.c-information__type {
   font-size: 2rem;
   letter-spacing: 0.8px;
   border-bottom: 1px solid #000;
@@ -891,7 +891,7 @@ text
 }
 
 @media only screen and (max-width: 1024px) {
-  .c-discography__type {
+  .c-information__type {
     font-size: 1.7rem;
     letter-spacing: 0.68px;
     margin-bottom: 31px;
@@ -899,42 +899,42 @@ text
 }
 
 @media only screen and (max-width: 560px) {
-  .c-discography__type {
+  .c-information__type {
     font-size: 1.5rem;
     letter-spacing: 0.3px;
     margin-bottom: 26px;
   }
 }
 
-.c-discography__subtitle {
+.c-information__subtitle {
   font-size: 2.4rem;
   letter-spacing: 0.96px;
   margin-bottom: 10px;
 }
 
 @media only screen and (max-width: 1024px) {
-  .c-discography__subtitle {
+  .c-information__subtitle {
     font-size: 2rem;
     letter-spacing: 0.8px;
   }
 }
 
 @media only screen and (max-width: 560px) {
-  .c-discography__subtitle {
+  .c-information__subtitle {
     font-size: 1.8rem;
     letter-spacing: 0.36px;
     margin-bottom: 7px;
   }
 }
 
-.c-discography__title {
+.c-information__title {
   font-size: 3.6rem;
   letter-spacing: 1.44px;
   margin-bottom: 30px;
 }
 
 @media only screen and (max-width: 1024px) {
-  .c-discography__title {
+  .c-information__title {
     font-size: 3.2rem;
     letter-spacing: 1.28px;
     margin-bottom: 25px;
@@ -942,21 +942,21 @@ text
 }
 
 @media only screen and (max-width: 560px) {
-  .c-discography__title {
+  .c-information__title {
     font-size: 3rem;
     letter-spacing: 0.6px;
     margin-bottom: 20px;
   }
 }
 
-.c-discography__date {
+.c-information__date {
   font-size: 1.8rem;
   letter-spacing: 0.72px;
   margin-bottom: 50px;
 }
 
 @media only screen and (max-width: 1024px) {
-  .c-discography__date {
+  .c-information__date {
     font-size: 1.6rem;
     letter-spacing: 0.64px;
     margin-bottom: 0;
@@ -964,35 +964,35 @@ text
 }
 
 @media only screen and (max-width: 560px) {
-  .c-discography__date {
+  .c-information__date {
     font-size: 1.5rem;
     letter-spacing: 0.6px;
   }
 }
 
-.c-discography__body {
+.c-information__body {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
 
-.c-discography__body .c-btn5 {
+.c-information__body .c-btn5 {
   display: none;
 }
 
 @media only screen and (max-width: 1024px) {
-  .c-discography__body .c-btn5 {
+  .c-information__body .c-btn5 {
     display: block;
     margin-bottom: 15px;
   }
 }
 
-.c-discography__body .c-discography__share {
+.c-information__body .c-information__share {
   display: none;
 }
 
 @media only screen and (max-width: 1024px) {
-  .c-discography__body .c-discography__share__title {
+  .c-information__body .c-information__share__title {
     margin-bottom: 5px;
     margin-right: 12px;
     font-size: 1.4rem;
@@ -1001,13 +1001,13 @@ text
 }
 
 @media only screen and (max-width: 560px) {
-  .c-discography__body .c-discography__share__title {
+  .c-information__body .c-information__share__title {
     margin-bottom: 2px;
   }
 }
 
 @media only screen and (max-width: 1024px) {
-  .c-discography__body .c-discography__share {
+  .c-information__body .c-information__share {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1020,28 +1020,28 @@ text
   }
 }
 
-.c-discography__body .c-btn4 {
+.c-information__body .c-btn4 {
   margin-top: 10px;
 }
 
-.c-discography__share {
+.c-information__share {
   margin-top: 45px;
 }
 
-.c-discography__share__title {
+.c-information__share__title {
   font-size: 1.6rem;
   letter-spacing: 0.64px;
   margin-bottom: 15px;
 }
 
-.c-discography__mainvisual {
+.c-information__mainvisual {
   padding-top: 100%;
   position: relative;
   background-color: black;
   margin-bottom: 80px;
 }
 
-.c-discography__mainvisual img {
+.c-information__mainvisual img {
   position: absolute;
   top: 0;
   left: 0;
@@ -1052,114 +1052,114 @@ text
 }
 
 @media only screen and (max-width: 1024px) {
-  .c-discography__mainvisual {
+  .c-information__mainvisual {
     margin-bottom: 60px;
   }
 }
 
 @media only screen and (max-width: 560px) {
-  .c-discography__mainvisual {
+  .c-information__mainvisual {
     margin-bottom: 45px;
   }
 }
 
-.c-discography__content {
+.c-information__content {
   font-family: noto-sans-cjk-jp, sans-serif;
 }
 
-.c-discography__content > * {
+.c-information__content > * {
   margin-bottom: 60px;
 }
 
 @media only screen and (max-width: 560px) {
-  .c-discography__content > * {
+  .c-information__content > * {
     margin-bottom: 45px;
   }
 }
 
-.c-discography__content p {
+.c-information__content p {
   font-size: 1.6rem;
   line-height: 2;
   color: #555555;
 }
 
 @media only screen and (max-width: 1024px) {
-  .c-discography__content p {
+  .c-information__content p {
     font-size: 1.5rem;
   }
 }
 
 @media only screen and (max-width: 560px) {
-  .c-discography__content p {
+  .c-information__content p {
     font-size: 1.4rem;
     line-height: 1.86;
   }
 }
 
-.c-discography__content a {
+.c-information__content a {
   font-weight: 600;
   color: #DD69A2;
   text-decoration: underline;
 }
 
-.c-discography__content h1 {
+.c-information__content h1 {
   font-size: 2.2rem;
   line-height: 1.45;
   font-weight: 500;
 }
 
 @media only screen and (max-width: 1024px) {
-  .c-discography__content h1 {
+  .c-information__content h1 {
     font-size: 2rem;
     line-height: 1.5;
   }
 }
 
 @media only screen and (max-width: 560px) {
-  .c-discography__content h1 {
+  .c-information__content h1 {
     font-size: 1.8rem;
   }
 }
 
-.c-discography__content b {
+.c-information__content b {
   color: black;
 }
 
-.c-discography__content .wp-caption-text {
+.c-information__content .wp-caption-text {
   color: #888888;
   margin-top: 15px;
 }
 
 @media only screen and (max-width: 1024px) {
-  .c-discography__content .wp-caption-text {
+  .c-information__content .wp-caption-text {
     font-size: 1.3rem;
     margin-top: 10px;
   }
 }
 
-.c-discography__content table {
+.c-information__content table {
   width: 100%;
   table-layout: fixed;
   font-size: 1.6rem;
 }
 
-.c-discography__content table td {
+.c-information__content table td {
   padding-bottom: 15px;
 }
 
-.c-discography__content hr {
+.c-information__content hr {
   border: 0;
   border-bottom: 1px solid #CCCCCC;
   margin: 80px 0;
 }
 
 @media only screen and (max-width: 1024px) {
-  .c-discography__content hr {
+  .c-information__content hr {
     margin: 60px 0;
   }
 }
 
-.c-discography__content .two-col {
+.c-information__content .two-col {
   -webkit-column-count: 2;
      -moz-column-count: 2;
           column-count: 2;
@@ -1171,25 +1171,25 @@ text
   margin-bottom: 45px;
 }
 
-.c-discography__content .two-col li {
+.c-information__content .two-col li {
   margin-bottom: 15px;
 }
 
 @media only screen and (max-width: 560px) {
-  .c-discography__content .two-col li {
+  .c-information__content .two-col li {
     margin-bottom: 12px;
   }
 }
 
 @media only screen and (max-width: 1024px) {
-  .c-discography__content .two-col {
+  .c-information__content .two-col {
     font-size: 1.5rem;
     line-height: 1.47;
   }
 }
 
 @media only screen and (max-width: 560px) {
-  .c-discography__content .two-col {
+  .c-information__content .two-col {
     -webkit-column-count: 1;
        -moz-column-count: 1;
             column-count: 1;
@@ -1197,7 +1197,7 @@ text
   }
 }
 
-.c-discography__navigation {
+.c-information__navigation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1207,37 +1207,37 @@ text
   margin-top: 80px;
 }
 
-.c-discography__navigation__prev, .c-discography__navigation__next {
+.c-information__navigation__prev, .c-information__navigation__next {
   width: 100px;
   font-size: 2.2rem;
   letter-spacing: 0.8px;
 }
 
 @media only screen and (max-width: 1024px) {
-  .c-discography__navigation__prev, .c-discography__navigation__next {
+  .c-information__navigation__prev, .c-information__navigation__next {
     font-size: 1.8rem;
     letter-spacing: 0.72px;
   }
 }
 
 @media only screen and (max-width: 560px) {
-  .c-discography__navigation__prev, .c-discography__navigation__next {
+  .c-information__navigation__prev, .c-information__navigation__next {
     font-size: 1.6rem;
     letter-spacing: 0.32px;
   }
 }
 
-.c-discography__navigation__next {
+.c-information__navigation__next {
   text-align: right;
 }
 
-.c-discography__navigation__back {
+.c-information__navigation__back {
   font-size: 2rem;
   letter-spacing: 0.8px;
   position: relative;
 }
 
-.c-discography__navigation__back::before {
+.c-information__navigation__back::before {
   content: '';
   position: absolute;
   display: block;
@@ -1249,40 +1249,40 @@ text
 }
 
 @media only screen and (max-width: 560px) {
-  .c-discography__navigation__back::before {
+  .c-information__navigation__back::before {
     bottom: 0;
     height: 1px;
   }
 }
 
 @media only screen and (max-width: 1024px) {
-  .c-discography__navigation__back {
+  .c-information__navigation__back {
     font-size: 1.8rem;
     letter-spacing: 0.72px;
   }
 }
 
 @media only screen and (max-width: 560px) {
-  .c-discography__navigation__back {
+  .c-information__navigation__back {
     font-size: 1.6rem;
     letter-spacing: 0.32px;
   }
 }
 
 @media only screen and (max-width: 1024px) {
-  .c-discography__navigation {
+  .c-information__navigation {
     margin-top: 60px;
   }
 }
 
 @media only screen and (max-width: 560px) {
-  .c-discography__navigation {
+  .c-information__navigation {
     margin-top: 45px;
   }
 }
 
 @media only screen and (max-width: 1024px) {
-  .c-discography {
+  .c-information {
     display: block;
   }
 }
@@ -1591,7 +1591,7 @@ list
   }
 }
 
-.c-discography-list {
+.c-information-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1599,27 +1599,27 @@ list
       flex-wrap: wrap;
 }
 
-.c-discography-list__item {
+.c-information-list__item {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 33.33%;
           flex: 0 0 33.33%;
   position: relative;
 }
 
-.c-discography-list__item a:hover {
+.c-information-list__item a:hover {
   opacity: 1;
 }
 
-.c-discography-list__item a:hover img {
+.c-information-list__item a:hover img {
   opacity: 1;
 }
 
-.c-discography-list__item a:hover .c-discography-list__info {
+.c-information-list__item a:hover .c-information-list__info {
   opacity: 1;
 }
 
 @media only screen and (max-width: 1024px) {
-  .c-discography-list__item {
+  .c-information-list__item {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 50%;
             flex: 0 0 50%;
@@ -1629,20 +1629,20 @@ list
 }
 
 @media only screen and (max-width: 560px) {
-  .c-discography-list__item {
+  .c-information-list__item {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
   }
 }
 
-.c-discography-list__thumbnail {
+.c-information-list__thumbnail {
   padding-top: 100%;
   position: relative;
   background-color: black;
 }
 
-.c-discography-list__thumbnail img {
+.c-information-list__thumbnail img {
   position: absolute;
   top: 0;
   left: 0;
@@ -1653,16 +1653,16 @@ list
 }
 
 @media only screen and (max-width: 1024px) {
-  .c-discography-list__thumbnail {
+  .c-information-list__thumbnail {
     margin-bottom: 20px;
   }
 }
 
 @media only screen and (max-width: 560px) {
-  .c-discography-list__thumbnail {
+  .c-information-list__thumbnail {
     padding-top: 0;
   }
-  .c-discography-list__thumbnail img {
+  .c-information-list__thumbnail img {
     position: relative;
     width: 100%;
     height: auto;
@@ -1671,7 +1671,7 @@ list
   }
 }
 
-.c-discography-list__info {
+.c-information-list__info {
   position: absolute;
   top: 0;
   left: 0;
@@ -1700,7 +1700,7 @@ list
 }
 
 @media only screen and (max-width: 1024px) {
-  .c-discography-list__info {
+  .c-information-list__info {
     position: relative;
     opacity: 1;
     background-color: transparent;
@@ -1709,13 +1709,13 @@ list
   }
 }
 
-.c-discography-list__type {
+.c-information-list__type {
   font-size: 1.6rem;
   letter-spacing: 0.64px;
 }
 
 @media only screen and (max-width: 1024px) {
-  .c-discography-list__type {
+  .c-information-list__type {
     font-size: 1.4rem;
     letter-spacing: 0.56px;
     border-bottom: 1px solid black;
@@ -1723,46 +1723,46 @@ list
   }
 }
 
-.c-discography-list__subtitle {
+.c-information-list__subtitle {
   font-size: 1.8rem;
   letter-spacing: 0.72px;
   margin-bottom: 10px;
 }
 
 @media only screen and (max-width: 1024px) {
-  .c-discography-list__subtitle {
+  .c-information-list__subtitle {
     font-size: 1.6rem;
     letter-spacing: 0.64px;
     margin-bottom: 5px;
   }
 }
 
-.c-discography-list__title {
+.c-information-list__title {
   font-size: 2.8rem;
   letter-spacing: 1.12px;
 }
 
 @media only screen and (max-width: 1024px) {
-  .c-discography-list__title {
+  .c-information-list__title {
     font-size: 2.2rem;
     letter-spacing: 0.88px;
   }
 }
 
-.c-discography-list__detail {
+.c-information-list__detail {
   font-size: 1.6rem;
   letter-spacing: 0.64px;
   border-bottom: 1px solid white;
 }
 
 @media only screen and (max-width: 1024px) {
-  .c-discography-list__detail {
+  .c-information-list__detail {
     display: none;
   }
 }
 
 @media only screen and (max-width: 1024px) {
-  .c-discography-list {
+  .c-information-list {
     margin-bottom: -45px;
     margin: 0 -15px;
   }
@@ -3177,14 +3177,14 @@ other
   }
 }
 
-.c-card__album {
+.c-card__daimei {
   font-size: 2.6rem;
   letter-spacing: 0.52px;
   margin-bottom: 10px;
 }
 
 @media only screen and (max-width: 1024px) {
-  .c-card__album {
+  .c-card__daimei {
     font-size: 2.2rem;
     letter-spacing: 0.44px;
     margin-bottom: 5px;
@@ -3192,7 +3192,7 @@ other
 }
 
 @media only screen and (max-width: 560px) {
-  .c-card__album {
+  .c-card__daimei {
     font-size: 2rem;
     letter-spacing: 0.4px;
     margin-bottom: 7px;
@@ -3357,7 +3357,7 @@ other
   font-size: 1.4rem;
 }
 
-.c-discography-modal {
+.c-information-modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -3368,7 +3368,7 @@ other
   display: none;
 }
 
-.c-discography-modal__scroll {
+.c-information-modal__scroll {
   width: 100%;
   height: 100%;
   padding: 0 25px;
@@ -3377,7 +3377,7 @@ other
 
 }
 
-.c-discography-modal__wrapper {
+.c-information-modal__wrapper {
   max-width: 500px;
   background-color: #f7f7f7;
   margin: 0 auto;
@@ -3385,12 +3385,12 @@ other
 }
 
 @media only screen and (max-width: 560px) {
-  .c-discography-modal__wrapper {
+  .c-information-modal__wrapper {
     padding: 30px;
   }
 }
 
-.c-discography-modal__thumbnail {
+.c-information-modal__thumbnail {
   padding-top: 100%;
   position: relative;
   margin-bottom: 45px;
@@ -3398,12 +3398,12 @@ other
 }
 
 @media only screen and (max-width: 560px) {
-  .c-discography-modal__thumbnail {
+  .c-information-modal__thumbnail {
     margin-bottom: 30px;
   }
 }
 
-.c-discography-modal__img {
+.c-information-modal__img {
 	position: absolute;
     top: 50%;
     left: 0;
@@ -3412,7 +3412,7 @@ other
     		transform: translateY(-50%);
 }
 
-.c-discography-modal__close {
+.c-information-modal__close {
   position: fixed;
   top: 45px;
   right: 45px;
@@ -3425,7 +3425,7 @@ other
   z-index: 3;
 }
 
-.c-discography-modal__close span {
+.c-information-modal__close span {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -3435,18 +3435,18 @@ other
   display: block;
 }
 
-.c-discography-modal__close span:nth-child(1) {
+.c-information-modal__close span:nth-child(1) {
   -webkit-transform: translate(-50%, -50%) rotate(-45deg);
           transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-.c-discography-modal__close span:nth-child(2) {
+.c-information-modal__close span:nth-child(2) {
   -webkit-transform: translate(-50%, -50%) rotate(45deg);
           transform: translate(-50%, -50%) rotate(45deg);
 }
 
 @media only screen and (max-width: 560px) {
-  .c-discography-modal__close span {
+  .c-information-modal__close span {
     background-color: black;
     width: 21px;
     height: 2px;
@@ -3454,7 +3454,7 @@ other
 }
 
 @media only screen and (max-width: 560px) {
-  .c-discography-modal__close {
+  .c-information-modal__close {
     top: 15px;
     right: 15px;
     background-color: white;
@@ -3466,35 +3466,35 @@ other
   }
 }
 
-.c-discography-modal__subtitle {
+.c-information-modal__subtitle {
   font-size: 2.2rem;
   letter-spacing: 0.44px;
   margin-bottom: 15px;
 }
 
 @media only screen and (max-width: 560px) {
-  .c-discography-modal__subtitle {
+  .c-information-modal__subtitle {
     font-size: 1.8rem;
     letter-spacing: 0.36px;
     margin-bottom: 10px;
   }
 }
 
-.c-discography-modal__title {
+.c-information-modal__title {
   font-size: 3.4rem;
   letter-spacing: 0.68px;
   margin-bottom: 45px;
 }
 
 @media only screen and (max-width: 560px) {
-  .c-discography-modal__title {
+  .c-information-modal__title {
     font-size: 3rem;
     letter-spacing: 0.6px;
     margin-bottom: 30px;
   }
 }
 
-.c-discography-modal__heading {
+.c-information-modal__heading {
   font-size: 1.8rem;
   font-weight: 500;
   letter-spacing: 0.72px;
@@ -3503,14 +3503,14 @@ other
 }
 
 @media only screen and (max-width: 560px) {
-  .c-discography-modal__heading {
+  .c-information-modal__heading {
     font-size: 1.6rem;
     letter-spacing: 0.32px;
     margin-bottom: 20px;
   }
 }
 
-.c-discography-modal__link {
+.c-information-modal__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3529,23 +3529,23 @@ other
           box-sizing: border-box;
 }
 
-.c-discography-modal__link img {
+.c-information-modal__link img {
   height: 46px;
 }
 
 @media only screen and (max-width: 560px) {
-  .c-discography-modal__link img {
+  .c-information-modal__link img {
     height: 38px;
   }
 }
 
 @media only screen and (max-width: 560px) {
-  .c-discography-modal__link {
+  .c-information-modal__link {
     height: 50px;
   }
 }
 
-.c-discography-modal__bottom {
+.c-information-modal__bottom {
   display: block;
   margin: 0 auto;
   background-color: transparent;
@@ -3557,7 +3557,7 @@ other
   margin-top: 32px;
 }
 
-.c-discography-modal__bottom::after {
+.c-information-modal__bottom::after {
   content: "";
   display: inline-block;
   background-image: url(../img/icons/close@2x.png);
