@@ -1,2 +1,4 @@
 GenServerWiki
 はっきんぐしわろすわろす
+kaemashita
+testetst
