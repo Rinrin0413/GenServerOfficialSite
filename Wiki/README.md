@@ -1,0 +1,2 @@
+GenServerWiki
+はっきんぐしわろすわろす
