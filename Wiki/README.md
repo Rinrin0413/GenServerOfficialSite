@@ -1,4 +1,1 @@
-GenServerWiki
-はっきんぐしわろすわろす
-kaemashita
-testetst
+#Wikiはこの改装に作りモス
